@@ -1,4 +1,4 @@
-const API_URL = "https://pratica-fullstack-backend-cfcs.onrender.com";
+const API_URL = "https://pratica-fullstack-backend-cfcs.onrender.com/produtos";
 
 const formulario = document.querySelector("#form-produto");
 const campoId = document.querySelector("#produto-id");
