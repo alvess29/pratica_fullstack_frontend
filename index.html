@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f5c45">
+    <title>Cadastro de Produtos</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Cadastro de Produtos</h1>
+        <p>Gerencie os produtos cadastrados no sistema</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="painel">
+        <h2 id="titulo-formulario">Novo produto</h2>
+
+        <form id="form-produto">
+          <input type="hidden" id="produto-id">
+
+          <label for="nome">Nome</label>
+          <input id="nome" name="nome" type="text" required>
+
+          <label for="preco">Preço</label>
+          <input id="preco" name="preco" type="number" min="0" step="0.01" required>
+
+          <label for="estoque">Estoque</label>
+          <input id="estoque" name="estoque" type="number" min="0">
+
+          <div class="acoes-formulario">
+            <button type="submit" id="botao-salvar">Cadastrar</button>
+            <button type="button" id="botao-cancelar" class="secundario oculto">
+              Cancelar edição
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="painel">
+        <div class="cabecalho-lista">
+          <h2>Produtos</h2>
+          <button type="button" id="botao-atualizar" class="secundario">Atualizar lista</button>
+        </div>
+
+        <form id="form-busca" class="busca">
+          <label for="busca-id">Buscar produto pelo ID</label>
+          <div class="linha-busca">
+            <input id="busca-id" type="text" placeholder="Informe o ID do produto">
+            <button type="submit">Buscar</button>
+            <button type="button" id="botao-limpar-busca" class="secundario">Listar todos</button>
+          </div>
+        </form>
+
+        <p id="mensagem" role="status" aria-live="polite"></p>
+        <div id="lista-produtos" class="lista-produtos"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

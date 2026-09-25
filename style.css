@@ -1,0 +1,172 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #24302b;
+  background: #f4f7f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #1f5c45;
+  color: white;
+  padding: 28px 0;
+}
+
+header h1,
+header p {
+  margin: 0;
+}
+
+header p {
+  margin-top: 6px;
+}
+
+.container {
+  width: min(100% - 32px, 1000px);
+  margin: 0 auto;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  align-items: start;
+}
+
+.painel {
+  background: white;
+  border: 1px solid #dce5e0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+h2 {
+  margin: 0 0 18px;
+  font-size: 1.25rem;
+}
+
+label {
+  display: block;
+  margin: 14px 0 6px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aebcb5;
+  border-radius: 5px;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #75ad95;
+  border-color: #1f5c45;
+}
+
+button {
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 14px;
+  background: #1f5c45;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #174634;
+}
+
+button.secundario {
+  background: #e6ece9;
+  color: #24302b;
+}
+
+button.perigo {
+  background: #a52c2c;
+}
+
+.acoes-formulario,
+.acoes-produto,
+.linha-busca,
+.cabecalho-lista {
+  display: flex;
+  gap: 8px;
+}
+
+.acoes-formulario {
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.cabecalho-lista {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho-lista h2 {
+  margin: 0;
+}
+
+.busca {
+  margin: 18px 0;
+}
+
+.linha-busca input {
+  flex: 1;
+}
+
+#mensagem {
+  min-height: 22px;
+  color: #42534b;
+}
+
+#mensagem.erro {
+  color: #a52c2c;
+}
+
+.lista-produtos {
+  display: grid;
+  gap: 10px;
+}
+
+.produto {
+  border: 1px solid #dce5e0;
+  border-radius: 6px;
+  padding: 14px;
+}
+
+.produto h3 {
+  margin: 0 0 6px;
+}
+
+.produto p {
+  margin: 4px 0;
+  overflow-wrap: anywhere;
+}
+
+.acoes-produto {
+  margin-top: 12px;
+}
+
+.oculto {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .linha-busca {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Cadastro de Produtos",
+  "short_name": "Produtos",
+  "description": "Aplicação simples para gerenciar produtos",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f4f7f5",
+  "theme_color": "#1f5c45",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
